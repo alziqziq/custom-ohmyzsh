@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias b="cd .."
-alias dev="cd ~/Documents/DEV"
+alias dev="cd ~/Documents/Development"
 alias hm="cd ~"
 alias ssh-dev-tiket="ssh dev_ziqri@192.168.40.45 -p 55155"
 
