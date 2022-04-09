@@ -7,6 +7,11 @@ this repository for custom my oh my zsh, if you want same like me :
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/alziqziq/custom-ohmyzsh/main/tools/install.sh)"
 ```
 
+## install zsh-autosuggestions
+```shell
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
 ## what's the update?
 - set `amuse` for default theme
 - set my alias
