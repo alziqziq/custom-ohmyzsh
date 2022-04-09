@@ -4,7 +4,7 @@ this repository for custom my oh my zsh, if you want same like me :
 
 ## install
 ```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/alziqziq/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/alziqziq/custom-ohmyzsh/main/tools/install.sh)"
 ```
 
 ## what's the update?
