@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -105,38 +105,26 @@ alias dev="cd ~/Documents/Development"
 alias hm="cd ~"
 alias ssh-dev-tiket="ssh dev_ziqri@192.168.40.45 -p 55155"
 
-npmtest() {
-	npm run test:dev --silent $1
-}
+# GITHUB
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gpull='git pull origin'
+alias gpush='git push origin'
+alias gtag='f() { git tag $1; git push origin --tags --no-verify; };f'
+alias grebase='git rebase -i head~';
+alias gcom='git commit -m $1'
 
-gpull() {
-	git pull origin $1
-}
-
-gpush() {
-	git push origin $1
-}
-
-gtag() {
-	git tag $1; git push origin --tags --no-verify;
-}
-
-gnew() {
-	git checkout -b $1;
-}
-
-gcheck() {
-	git checkout $1;
-}
-
-grebase() {
-	git rebase -i head~$1;
-}
+# Port
+alias checkport='lsof -i tcp:'
+alias killpid='kill -9'
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# YARN
+# export PATH="$PATH:/usr/local/bin/yarn/"
 
 # Flutter
 # export PATH="$PATH:`pwd`/Library/flutter/bin"
@@ -147,3 +135,14 @@ export NVM_DIR="$HOME/.nvm"
 # Homebrew
 export PATH="$PATH:/opt/homebrew/bin/"
 ZSH_DISABLE_COMPFIX="true"
+
+
+# LinkAja
+export GITLAB_AUTH_TOKEN=wGsFDGPzUhpAkrpWoX8b
+#export GITLAB_AUTH_TOKEN=e8ByQ9FDd8wr4MW27oCk=
+export SALMON_ACCESS_TOKEN=pjVTTjzFP1z5Lf_D1wn6
+export CMS_NPM_REGISTRY=http://localhost:4873
+export CEMENT_ACCESS_TOKEN=GKycMN6m3ypA5zw92uz-
+# my gitlab
+#export GITLAB_AUTH_TOKEN=glpat-vN6xjZuxkvrxVnzaxPtz
+export PATH="${HOME}/.pyenv/shims:${PATH}"
