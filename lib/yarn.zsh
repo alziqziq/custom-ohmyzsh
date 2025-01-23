@@ -39,3 +39,15 @@ function go_info() {
     return
   fi
 }
+
+
+function bun_info() {
+  which bun &>/dev/null || return
+  local bun_prompt=${$(bun -v)#v}
+
+  if [[ "${bun_prompt//[0-9\.]/}" ]]; then
+    return
+  fi
+
+  echo " | bun v${ZSH_THEME_NVM_PROMPT_PREFIX}${bun_prompt}${ZSH_THEME_NVM_PROMPT_SUFFIX}";
+}
