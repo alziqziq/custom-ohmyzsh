@@ -33,7 +33,7 @@ function pnpm_info() {
 
 function go_info() {
   if command -v go &> /dev/null; then
-    go_version=$(go version | grep -oP "go[0-9]+\.[0-9]+(\.[0-9]+)?" | sed 's/go//')
+    go_version=$(go version | perl -nle 'print $& if /go[0-9]+\.[0-9]+(\.[0-9]+)?/' | sed 's/go//')
     echo " | go v${ZSH_THEME_NVM_PROMPT_PREFIX}${go_version}${ZSH_THEME_NVM_PROMPT_SUFFIX}";
   else
     return
