@@ -6,7 +6,12 @@ function nvm_prompt_info() {
   for manager in "${managers[@]}"; do
     local version=$($manager --version 2>/dev/null)
     if [[ -n "$version" ]]; then
-      output+="${output:+ | }$manager v$version"
+      if [[ "$manager" == "node" ]]; then
+        # respone node -v sudah memiliki `v` di depannya
+        output+="${output:+ | }$manager $version"
+      else
+        output+="${output:+ | }$manager v$version"
+      fi
     fi
     
     # Hentikan jika node/npm tidak ditemukan (kecuali untuk manager tambahan)
