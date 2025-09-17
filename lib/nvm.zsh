@@ -5,7 +5,8 @@ function nvm_prompt_info() {
   
   for manager in "${managers[@]}"; do
     local version=$($manager --version 2>/dev/null)
-    if [[ -n "$version" ]]; then
+
+    if [[ -n "$version" && "$version" =~ [0-9] ]]; then
       if [[ "$manager" == "node" ]]; then
         # respone node -v sudah memiliki `v` di depannya
         output+="${output:+ | }$manager $version"
