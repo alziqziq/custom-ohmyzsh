@@ -14,7 +14,7 @@ function nvm_prompt_info() {
         output+="${output:+ | }$manager v$version"
       fi
     fi
-    
+
     # Hentikan jika node/npm tidak ditemukan (kecuali untuk manager tambahan)
     if [[ "$manager" == "node" || "$manager" == "npm" ]] && [[ -z "$version" ]]; then
       echo "Error: $manager not found" >&2
