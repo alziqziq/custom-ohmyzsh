@@ -1,6 +1,6 @@
 # get the nvm-controlled node.js version
 function nvm_prompt_info() {
- local managers=("node" "npm" "pnpm" "yarn")
+ local managers=("node" "npm" "pnpm" "yarn", "bun")
   local output=""
   
   for manager in "${managers[@]}"; do
